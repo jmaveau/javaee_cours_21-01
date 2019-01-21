@@ -8,11 +8,16 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 public class TestServlet extends HttpServlet {
+
+    int compteur = 0;
+
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
         response.setContentType("text/html");
         response.setCharacterEncoding( "UTF-8" );
         PrintWriter out = response.getWriter();
@@ -26,5 +31,11 @@ public class TestServlet extends HttpServlet {
         out.println("<p>Ceci est une page générée depuis une servlet.</p>");
         out.println("</body>");
         out.println("</html>");
+        int compteurInterne = 0;
+        out.println("Compteur Interne : "+compteurInterne);
+        out.println("Compteur Global : "+compteur);
+        compteurInterne++;
+        compteur++;
+
     }
 }
