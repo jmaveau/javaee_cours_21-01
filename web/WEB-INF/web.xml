@@ -13,4 +13,13 @@
         <url-pattern>/toto</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>TestServlet1</servlet-name>
+        <servlet-class>Controller.TestServlet1</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TestServlet1</servlet-name>
+        <url-pattern>/test1</url-pattern>
+    </servlet-mapping>
+
 </web-app>

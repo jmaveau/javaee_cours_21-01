@@ -11,7 +11,6 @@ public class TestServlet extends HttpServlet {
 
     int compteur = 0;
 
-
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
