@@ -1,4 +1,4 @@
-<%--
+<%@ page import="com.beans.Produit" %><%--
   Created by IntelliJ IDEA.
   User: mawo
   Date: 1/21/19
@@ -15,12 +15,13 @@
 
 <p>
     <%
-        String attribut = (String) request.getAttribute("test");
-        out.println( attribut );
-        String parametre_lang = request.getParameter("lang");
-        out.println("</br>Langue demandée : "+parametre_lang );
-        String parametre_prix = request.getParameter("price");
-        out.println("</br>Prix demandé : "+parametre_prix);
+        Produit myProduct = (Produit) request.getAttribute("Produit");
+
+        out.println("</br>Nom du produit : "+ myProduct.getNom());
+        out.println("</br>Prix demandé : "+ myProduct.getPrix_achat());
+        out.println("</br>Description : "+ myProduct.getDescription());
+        out.println("</br>Créé par : " + myProduct.getJeremy());
+
     %>
 </p>
 

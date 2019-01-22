@@ -1,5 +1,7 @@
 package Controller;
 
+import com.beans.Produit;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -13,10 +15,15 @@ public class TestServlet1 extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String langue = request.getParameter( "lang" );
+        String description = request.getParameter( "desc" );
         String prix = request.getParameter( "price" );
-        String message="Transmission de variables : OK !";
-        request.setAttribute("test",message);
+        String name = request.getParameter("name");
+
+        com.beans.Produit myProduct = new Produit();
+        myProduct.setPrix_achat(Float.valueOf(prix));
+        myProduct.setDescription(description);
+        myProduct.setNom(name);
+        request.setAttribute("Produit", myProduct);
         this.getServletContext().getRequestDispatcher("/WEB-INF/test.jsp").forward(request, response);
     }
 }
