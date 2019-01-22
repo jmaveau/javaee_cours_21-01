@@ -12,5 +12,17 @@
 </head>
 <body>
 - Page générée depuis une JSP -
+
+<p>
+    <%
+        String attribut = (String) request.getAttribute("test");
+        out.println( attribut );
+        String parametre_lang = request.getParameter("lang");
+        out.println("</br>Langue demandée : "+parametre_lang );
+        String parametre_prix = request.getParameter("price");
+        out.println("</br>Prix demandé : "+parametre_prix);
+    %>
+</p>
+
 </body>
 </html>
