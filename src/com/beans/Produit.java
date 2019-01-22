@@ -1,8 +1,11 @@
 package com.beans;
 
 public class Produit {
-    public Produit(){
-        jeremy= 1;
+    public Produit(String snom, String sdesc, float sprix, float sjeremy){
+        jeremy= sjeremy;
+        nom=snom;
+        description=sdesc;
+        prix_achat=sprix;
     };
 
     private String nom;

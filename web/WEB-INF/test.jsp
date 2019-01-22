@@ -15,7 +15,7 @@
 
 <p>
     <%
-        Produit myProduct = (Produit) request.getAttribute("Produit");
+        Produit myProduct = (Produit) request.getAttribute("Produit1");
 
         out.println("</br>Nom du produit : "+ myProduct.getNom());
         out.println("</br>Prix demandé : "+ myProduct.getPrix_achat());
