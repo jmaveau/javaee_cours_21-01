@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.awt.*;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class TestServlet1 extends HttpServlet {
 
@@ -24,8 +25,13 @@ public class TestServlet1 extends HttpServlet {
         Produit my2ndProduct = new Produit("Mini_Usb_cable", "Brancher des clef", 15.5f,1);
         Produit my3ndProduct = new Produit("Micro_Usb_cable", "Brancher des clef", 25.5f,1);
         Produit my4ndProduct = new Produit("UsbC_cable", "Brancher des clef", 20.5f,1);
-        List
-        request.setAttribute("Produit1", my1stProduct);
-        this.getServletContext().getRequestDispatcher("/WEB-INF/test.jsp").forward(request, response);
+        ArrayList<Produit> lProduits = new ArrayList<Produit>();
+        lProduits.add(my1stProduct);
+        lProduits.add(my2ndProduct);
+        lProduits.add(my3ndProduct);
+        lProduits.add(my4ndProduct);
+
+        request.setAttribute("Liste_Produits", lProduits);
+        this.getServletContext().getRequestDispatcher("/WEB-INF/test2.jsp").forward(request, response);
     }
 }
