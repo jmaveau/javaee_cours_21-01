@@ -31,4 +31,13 @@
         <url-pattern>/test2</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>TestServlet3</servlet-name>
+        <servlet-class>Controller.MariaDBServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TestServlet3</servlet-name>
+        <url-pattern>/mariadb</url-pattern>
+    </servlet-mapping>
+
 </web-app>
