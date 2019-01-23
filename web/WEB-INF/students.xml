@@ -34,4 +34,16 @@
         </grade>
     </student>
 
+    <student id="4">
+        <name>
+            <first>Jeremy</first>
+            <last>Maveau</last>
+            <middle>MAWO</middle>
+        </name>
+        <grade>
+            <points>100</points>
+            <letter>O</letter>
+        </grade>
+    </student>
+
 </students>
